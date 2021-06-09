@@ -1,0 +1,8 @@
+ALTER TABLE `modules`
+	ADD COLUMN `group_id` INT(11) NOT NULL AFTER `id`;
+ALTER TABLE `quizzes`
+	ADD COLUMN `need_to_answer` INT(11) NULL DEFAULT NULL AFTER `total_quiz`;
+ALTER TABLE `user_scores`
+	ADD COLUMN `course_id` INT(11) NOT NULL AFTER `user_id`;
+ALTER TABLE `groups`
+	ADD COLUMN `type_id` INT NULL DEFAULT NULL AFTER `details`;
